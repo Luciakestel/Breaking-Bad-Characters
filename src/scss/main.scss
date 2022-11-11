@@ -1,0 +1,10 @@
+@import 'core/variables';
+@import 'core/reset';
+@import 'core/responsive';
+@import 'layout/header';
+@import 'layout/form-search';
+@import 'layout/footer';
+
+.main {
+  height: 60vh;
+}

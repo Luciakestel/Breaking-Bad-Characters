@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.header {
+  background-image: url(../images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  background-origin: content-box;
+  height: 40vh; }
+  @media all and (min-width: 768px) {
+    .header {
+      background-position: 50% 20%; } }
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: absolute;
+  top: 35vh;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  border: 1px solid white;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.8); }
+  .form__label {
+    margin-right: 10px; }
+  .form__input {
+    padding: 5px; }
+  .form__button {
+    padding: 5px; }
+
+.footer {
+  border-top: 1px solid; }
+  .footer__text {
+    font-size: 18px;
+    text-align: center; }
+
+.main {
+  height: 60vh; }
+
+/*# sourceMappingURL=main.css.map */

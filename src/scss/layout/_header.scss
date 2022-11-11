@@ -1,0 +1,10 @@
+.header {
+  background-image: url(../images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  background-origin: content-box;
+  height: 40vh;
+  @include tablet {
+    background-position: 50% 20%;
+  }
+}
