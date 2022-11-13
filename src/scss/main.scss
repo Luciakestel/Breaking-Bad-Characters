@@ -7,7 +7,9 @@
 @import 'layout/footer';
 
 .selected {
-  background-color: lightblue;
-  color: white;
+  background-color: rgba(171, 231, 253, 0.5);
+  color: black;
   transform: scale(1.1);
+  border: 1px solid black;
+  margin: 5px;
 }

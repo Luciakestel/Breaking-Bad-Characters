@@ -33,11 +33,13 @@
     padding: 5px;
     margin-right: 10px;
     border-radius: 5px;
-    border: 1px solid black; }
+    border: 1px solid #044fe4;
+    width: 100%; }
   .form__button {
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid black; }
+    border: 1px solid #044fe4;
+    background-color: white; }
 
 .main {
   margin-top: 50px;
@@ -46,49 +48,64 @@
   flex-direction: row-reverse;
   justify-content: space-between; }
   .main__section_character {
-    width: 70%;
+    width: 60%;
     text-align: center; }
     .main__section_character--list {
       margin-top: 20px;
       display: flex;
       gap: 15px;
       flex-wrap: wrap; }
-      .main__section_character--list-element {
-        width: 210px;
-        height: 260px;
-        border: 1px solid;
-        border-radius: 20px;
-        padding: 10px; }
   .main__section_favourites {
-    width: 30%;
-    text-align: center; }
+    width: 40%;
+    text-align: center;
+    margin: 10px; }
     .main__section_favourites--list {
       margin-top: 20px;
       display: flex;
       gap: 15px;
       flex-wrap: wrap; }
-      .main__section_favourites--list-element {
-        width: 210px;
-        height: 260px;
-        border: 1px solid;
-        border-radius: 20px;
-        padding: 10px;
-        background-color: lightblue; }
+    .main__section_favourites-btn {
+      padding: 10px;
+      border: 1px solid #044fe4;
+      border-radius: 22px;
+      margin: 20px;
+      background-color: white; }
 
-.list-img {
-  width: 150px;
-  height: 200px;
-  border-radius: 10px; }
+.article {
+  width: 210px;
+  height: 260px;
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 10px; }
+  .article_title {
+    padding: 10px; }
+  .article_img {
+    width: 100px;
+    height: 150px;
+    border-radius: 10px; }
+  .article_status {
+    padding: 10px; }
+  .article_box {
+    display: flex;
+    justify-content: space-between; }
+  .article_close {
+    background-image: url("../images/close.svg");
+    background-size: contain;
+    width: 30px;
+    height: 30px; }
 
 .footer {
-  border-top: 1px solid; }
+  border-top: 1px solid;
+  background-color: #a1d6ff; }
   .footer__text {
     font-size: 18px;
     text-align: center; }
 
 .selected {
-  background-color: lightblue;
-  color: white;
-  transform: scale(1.1); }
+  background-color: rgba(171, 231, 253, 0.5);
+  color: black;
+  transform: scale(1.1);
+  border: 1px solid black;
+  margin: 5px; }
 
 /*# sourceMappingURL=main.css.map */
