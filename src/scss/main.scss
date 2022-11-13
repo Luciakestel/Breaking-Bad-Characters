@@ -3,8 +3,11 @@
 @import 'core/responsive';
 @import 'layout/header';
 @import 'layout/form-search';
+@import 'layout/list-characters';
 @import 'layout/footer';
 
-.main {
-  height: 60vh;
+.selected {
+  background-color: lightblue;
+  color: white;
+  transform: scale(1.1);
 }

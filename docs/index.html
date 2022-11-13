@@ -5,25 +5,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="./assets/css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="icon" href="./assets/images/graduation-favicon.svg" />
   <title>Evaluación final Lucía Kestel</title>
 </head>
 
-<body>
+<body class="page">
 <header class="header">
+  <form action="" class="form">
+    <input type="text" class="form__input js_input" placeholder="Example: Walter White">
+    <button class="form__button js_btn">Search</button>
+  </form>
 </header>
 <main class="main">
-  <form action="" class="form">
-    <label for="" class="form__label">
-      <input type="text" class="form__input" placeholder="Example: Walter White">
-    </label>
-    <button class="form__button">Buscar</button>
-  </form>
   
+  <section class="main__section_character">
+    <h2>Characters</h2>
+    <ul class="main__section_character--list js_character_list">
+    </ul>
+  </section>
+  <section class="main__section_favourites js_favourite_list">
+    <h2>Favourites</h2>
+    <ul class="main__section_favourites--list">
+    </ul>
+  </section>
+
 </main>
 <footer class="footer">
   <p class="footer__text">Breaking Bad is regarded as one of the greatest television series of all time, and with 16 primetime Emmy Awards. <span>&copy;Lucía Kestel 2022</span></p>
 </footer>
+<script type="text/javascript" src="./assets/js/main.js"></script>
 </body>
 
 </html>

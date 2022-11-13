@@ -11,13 +11,16 @@
   border: 1px solid white;
   width: 80%;
   background-color: rgba(255, 255, 255, 0.8);
-  &__label {
-    margin-right: 10px;
-  }
+  box-shadow: 2px 2px 2px;
   &__input {
     padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
   }
   &__button {
     padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
   }
 }
