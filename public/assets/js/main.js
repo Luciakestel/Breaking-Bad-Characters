@@ -44,7 +44,12 @@ function handleClickCharacter(event){
 
     const selectedCharacter = characters.find((eachCharacterObj) => eachCharacterObj.char_id === parseInt(event.currentTarget.id));
     
-    favCharacters.push(selectedCharacter);
+    const characterFav = favCharacters.find((eachCharacterObj) => eachCharacterObj.char_id === parseInt(event.currentTarget.id));
+    if(!characterFav){
+      favCharacters.push(selectedCharacter);
+    };
+
+    
     renderFavCharacters();
 }
 function searchCharacters(event){
