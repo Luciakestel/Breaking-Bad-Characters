@@ -1,29 +1,42 @@
 .main {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 
   &__section_character {
-    width: 60%;
+    width: 100%;
     text-align: center;
+
     &--list {
       margin-top: 20px;
       display: flex;
       gap: 15px;
       flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
     }
   }
   &__section_favourites {
-    width: 40%;
     text-align: center;
-    margin: 10px;
+    @include tablet {
+      width: 40%;
+      text-align: center;
+      margin: 10px;
+      border-right: 1px solid $colorBorder;
+    }
+
     &--list {
       margin-top: 20px;
       display: flex;
       gap: 15px;
       flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
     }
     &-btn {
       padding: 10px;
@@ -31,6 +44,15 @@
       border-radius: 22px;
       margin: 20px;
       background-color: white;
+    }
+  }
+  &__fav_menu {
+    margin-left: 20px;
+    margin-top: 30px;
+    transform: scale(1.6);
+    color: red;
+    @include tablet {
+      color: white;
     }
   }
 }
@@ -42,7 +64,7 @@
   padding: 10px;
 
   &_title {
-    padding: 10px;
+    margin-bottom: 10px;
   }
   &_img {
     width: 100px;
@@ -61,5 +83,37 @@
     background-size: contain;
     width: 30px;
     height: 30px;
+  }
+}
+
+.article_fav {
+  width: 160px;
+  height: 210px;
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 10px;
+
+  &_title {
+    font-size: 5px;
+    margin-bottom: 10px;
+  }
+  &_img {
+    width: 70px;
+    height: 120px;
+    border-radius: 10px;
+  }
+  &_status {
+    font-size: 10px;
+  }
+  &_box {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_close {
+    background-image: url('../images/close.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
   }
 }

@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="./assets/css/main.css" />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="icon" href="./assets/images/graduation-favicon.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
   <title>Evaluación final Lucía Kestel</title>
 </head>
 
 <body class="page">
+
 <header class="header">
-  <form action="" class="form">
-    <input type="text" class="form__input js_input" placeholder="Example: Walter White">
-    <button class="form__button js_btn">Search</button>
-  </form>
-</header>
+    <form action="" class="form">
+      <input type="text" class="form__input js_input" placeholder="Example: Walter White">
+      <button class="form__button js_btn">Search</button>
+    </form>
+  </header>
+
 <main class="main">
-  
-  <section class="main__section_character">
-    <h2>Characters</h2>
-    <ul class="main__section_character--list js_character_list">
-    </ul>
-  </section>
-  <section class="main__section_favourites ">
-    <h2>Favourites</h2>
-    <ul class="main__section_favourites--list js_favourite_list">
-    </ul>
-    <button class="main__section_favourites-btn js_fav_btn">Delete all favs</button>
-  </section>
+    <div main__fav><i class="fa-solid fa-heart main__fav_menu js_heart_fav"></i></div>
+   
+    <section class="main__section_character js_section_characters">
+        <h2 class="main__section_character-title js_characters">Characters</h2>
+        <ul class="main__section_character--list js_character_list">
+        </ul>
+        <button class=""></button>
+      </section>
 
-</main>
+    <section class="main__section_favourites collapse js_section_fav">
+        <h2 class="main__section_character-title js_characters">Favourites</h2>
+        <ul class="main__section_favourites--list js_favourite_list">
+        </ul>
+        <button class="main__section_favourites-btn js_fav_btn">Delete all favs</button>
+      </section>
+
+  </main>
+
 <footer class="footer">
-  <p class="footer__text">Breaking Bad is regarded as one of the greatest television series of all time, and with 16 primetime Emmy Awards. <span>&copy;Lucía Kestel 2022</span></p>
-</footer>
-<script type="text/javascript" src="./assets/js/main.js"></script>
+    <p class="footer__text">Breaking Bad is regarded as one of the greatest television series of all time, and with 16 primetime Emmy Awards.<span>&copy;Lucía Kestel 2022</span></p>
+  </footer>
 
+<script type="text/javascript" src="./assets/js/main.js"></script>
 </body>
 
 </html>
