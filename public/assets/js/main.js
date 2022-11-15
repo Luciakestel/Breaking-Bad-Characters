@@ -1,3 +1,6 @@
+'use strict';
+
+
 const charactersList = document.querySelector('.js_character_list');
 const favouriteList = document.querySelector('.js_favourite_list');
 const btn = document.querySelector('.js_btn');
@@ -7,16 +10,19 @@ const heartFav = document.querySelector('.js_heart_fav');
 const sectionFav = document.querySelector('.js_section_fav');
 const sectionCharacters = document.querySelector('.js_section_characters');
 const paintCharact = document.querySelector('.js_characters');
+
+
 let characters = [];
 let favCharacters = [];
 fetchCharacters();
+
 function fetchCharacters(){
     fetch('https://breakingbadapi.com/api/characters')
     .then(response => response.json())
     .then(dataResults =>{
         characters = dataResults;
-        renderCharacters();
         renderFavSaved();
+        renderCharacters();
     });
 }
     
@@ -34,7 +40,7 @@ function renderCharacters(){
         const characterFavIndex = favCharacters.findIndex((eachCharacterObj) => eachCharacterObj.char_id === character.char_id);
         let classFav = '';  
         if (characterFavIndex === -1){
-        classFav = '';
+            classFav = '';
         } else {
             classFav = 'selected';
         }
@@ -45,7 +51,6 @@ function renderCharacters(){
             <p class="article_status">${character.status}</p>
         </article>
         </li>`;
-        
     }
     charactersList.innerHTML = html;
         
@@ -54,7 +59,7 @@ function renderCharacters(){
     for (const character of listElement) {
         character.addEventListener(('click'), handleClickCharacter);
     }
- }
+}
     
 function handleClickCharacter(event){
     event.currentTarget.classList.toggle('selected');
@@ -88,7 +93,7 @@ function renderFavCharacters(){
     html += `<li>
     <article class="article_fav selected" id='${favCharacter.char_id}'>
         <div class="article_fav_box">  
-        <h3 clas="article_fav_title">${favCharacter.name}</h3>
+        <h3 class="article_fav_title">${favCharacter.name}</h3>
         <div class="article_fav_close js_close" id='${favCharacter.char_id}'></div>
         </div>
         <img src="${favCharacter.img}" alt="Foto del personaje" class="article_fav_img"> 
@@ -113,6 +118,9 @@ function closeFav(event){
     }
     renderCharacters();
     renderFavCharacters();
+    if (favCharacters.length === 0){
+        sectionFav.classList.add('collapse');
+    }
 }
       
 function resetFavs(event){
@@ -143,7 +151,6 @@ btn.addEventListener(('click'), searchCharacters);
 btnFav.addEventListener(('click'), resetFavs);
 heartFav.addEventListener(('click'), handleClickHeart);
 paintCharact.addEventListener(('click'), renderCharactersAgain);
-'use strict';
 
 
 

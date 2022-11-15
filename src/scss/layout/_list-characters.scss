@@ -11,6 +11,12 @@
   &__section_character {
     width: 100%;
     text-align: center;
+    cursor: pointer;
+
+    &-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
 
     &--list {
       margin-top: 20px;
@@ -23,11 +29,16 @@
   }
   &__section_favourites {
     text-align: center;
+
     @include tablet {
       width: 40%;
       text-align: center;
       margin: 10px;
       border-right: 1px solid $colorBorder;
+    }
+    &-title {
+      font-size: 24px;
+      font-weight: bold;
     }
 
     &--list {
@@ -49,10 +60,12 @@
   &__fav_menu {
     margin-left: 20px;
     margin-top: 30px;
-    transform: scale(1.6);
+    transform: scale(1.7);
     color: red;
+    padding: 10px;
+
     @include tablet {
-      color: white;
+      display: none;
     }
   }
 }
@@ -64,7 +77,9 @@
   padding: 10px;
 
   &_title {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
   }
   &_img {
     width: 100px;
@@ -73,6 +88,7 @@
   }
   &_status {
     padding: 10px;
+    font-size: 18px;
   }
   &_box {
     display: flex;
@@ -94,7 +110,8 @@
   padding: 10px;
 
   &_title {
-    font-size: 5px;
+    font-size: 16px;
+    font-weight: bold;
     margin-bottom: 10px;
   }
   &_img {
@@ -103,7 +120,8 @@
     border-radius: 10px;
   }
   &_status {
-    font-size: 10px;
+    margin-top: 5px;
+    font-size: 15px;
   }
   &_box {
     display: flex;
