@@ -1,3 +1,3 @@
-### EVALUACIÓN FINAL DEL MÓDULO DOS (JAVASCRIPT) DE LUCÍA KESTEL
+### FINAL EVALUATION MODULE 2 (JAVASCRIPT) - BY LUCÍA KESTEL
 
-Esta evaluación conciste en realizar una página web de personajes de la serie Breaking Bad, en la cual podremos buscar los personajes y marcar nuestros favoritos.
+this project is about a breaking bad series webpage, where you can find your favourites series characters, know his names, see his photos and know if they are dead or alive.
