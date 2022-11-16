@@ -10,4 +10,5 @@ const heartFav = document.querySelector('.js_heart_fav');
 const sectionFav = document.querySelector('.js_section_fav');
 const sectionCharacters = document.querySelector('.js_section_characters');
 const paintCharact = document.querySelector('.js_characters');
-
+const btnListFav = document.querySelector('.js_btn_fav');
+const textListFav =document.querySelector('js_text_fav');

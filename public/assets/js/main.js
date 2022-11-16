@@ -10,8 +10,8 @@ const heartFav = document.querySelector('.js_heart_fav');
 const sectionFav = document.querySelector('.js_section_fav');
 const sectionCharacters = document.querySelector('.js_section_characters');
 const paintCharact = document.querySelector('.js_characters');
-
-
+const btnListFav = document.querySelector('.js_btn_fav');
+const textListFav =document.querySelector('js_text_fav');
 let characters = [];
 let favCharacters = [];
 fetchCharacters();
@@ -21,6 +21,7 @@ function fetchCharacters(){
     .then(response => response.json())
     .then(dataResults =>{
         characters = dataResults;
+        console.log(characters);
         renderFavSaved();
         renderCharacters();
     });
@@ -38,20 +39,29 @@ function renderCharacters(){
     let html = '';
     for (const character of characters) {
         const characterFavIndex = favCharacters.findIndex((eachCharacterObj) => eachCharacterObj.char_id === character.char_id);
-        let classFav = '';  
+        let classFav = '';
         if (characterFavIndex === -1){
             classFav = '';
         } else {
             classFav = 'selected';
         }
+        let superText = '';  
+        if (character.appearance.length === 5 ){
+            superText = 'super personaje';
+        } else {
+            superText = '';
+        }
+    
         html += `<li >
         <article class="js_list_element article ${classFav}" id='${character.char_id}'>
             <h3 class="article_title">${character.name}</h3>
             <img src="${character.img}" alt="Foto del personaje" class="article_img">
             <p class="article_status">${character.status}</p>
+            <p class="article_status js_appearance">${character.appearance} ${superText}</p>
         </article>
         </li>`;
     }
+    
     charactersList.innerHTML = html;
         
     const listElement = document.querySelectorAll('.js_list_element');
@@ -147,10 +157,15 @@ function renderCharactersAgain(){
     fetchCharacters();
     input.value = '';
 }
+function renderListFav(event){
+    event.preventDefault();
+    console.log(`Tienes ${favCharacters.length} favoritos`);
+}
 btn.addEventListener(('click'), searchCharacters);
 btnFav.addEventListener(('click'), resetFavs);
 heartFav.addEventListener(('click'), handleClickHeart);
 paintCharact.addEventListener(('click'), renderCharactersAgain);
+btnListFav.addEventListener(('click'), renderListFav);
 
 
 
