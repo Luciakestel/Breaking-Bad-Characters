@@ -17,7 +17,7 @@ let favCharacters = [];
 fetchCharacters();
 
 function fetchCharacters(){
-    fetch('https://breakingbadapi.com/api/characters')
+    fetch('./assets/data/characters.json')
     .then(response => response.json())
     .then(dataResults =>{
         characters = dataResults;

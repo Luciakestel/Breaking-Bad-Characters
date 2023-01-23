@@ -36,5 +36,10 @@
   },
   "watch": {
     "html": "src/**/*.html"
+  },
+  "data": {
+    "src": "src/data/**.json",
+    "dest": "public/assets/data",
+    "dist": "docs/assets/data/"
   }
 }
